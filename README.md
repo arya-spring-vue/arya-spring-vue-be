@@ -24,6 +24,7 @@ spring-boot, spring ,mysql
 #### 4.打包运行本地启动服务供前端调用
 - 创建基于Spring的内嵌Tomcat容器运行时，这是通过spring boot的SpringApplication
 - 通过mvn生成可执行的jar包并运行:`./mvnw clean package` `java -jar target/foo-bar-baz.jar`或者`./mvnw spring-boot:run`
+- 服务运行在localhost:8080
 
 
 ### 参考资料
