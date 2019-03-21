@@ -14,9 +14,11 @@ public class MainController {
     private UserRepository userRepository;
 
     @GetMapping(path = "/createUser")
-    public @ResponseBody String createUser(@RequestParam String name, @RequestParam String email){
+    public @ResponseBody String createUser(@RequestParam String name, @RequestParam String sex, @RequestParam Integer age, @RequestParam String email){
         User user = new User();
         user.setName(name);
+        user.setSex(sex);
+        user.setAge(age);
         user.setEmail(email);
         userRepository.save(user);
         return "创建用户成功！";

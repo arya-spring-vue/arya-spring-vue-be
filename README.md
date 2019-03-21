@@ -17,7 +17,7 @@ spring-boot, spring ,mysql
 - 创建application.properties，配置Spring JPA和Spring DataSource，建立Spring与Mysql之间的连接
 
 #### 3.Spring编写Controller提供接口
-- 创建实体类，其实也就是通过Spring创建user表，指定pk，并创建name，email字段及其getter和setter
+- 创建实体类，其实也就是通过Spring创建user表，指定pk，并创建name，email字段及其getter和setter，通过lombok的@Data注解优化实体类
 - 创建用于CRUD的repository Bean，继承spring CrudRepository类，用于实例的增删改查
 - 创建Spring的Controller，并且通过RequestMapping添加路由，RequestParam抽取请求中数据，在不同路由进行不同的业务处理
 
