@@ -10,7 +10,7 @@ spring-boot, spring ,mysql
 [Spring Initialzr](https://start.spring.io/) 
 
 - 基本：Maven，Java8，Spring Boot 2.1.3
-- 依赖：Web，MySql8.0.15
+- 依赖：Web，MySql8.0.15, Lombok
 
 #### 2.Spring与MySql的ORM映射
 - 创建数据库，设置用户账号密码并赋权
