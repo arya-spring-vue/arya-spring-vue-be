@@ -13,6 +13,7 @@ public class MainController {
     @Autowired
     private UserRepository userRepository;
 
+    // request body: form-data
     @PostMapping(path = "/createUser")
     public @ResponseBody String createUser(@RequestParam String name, @RequestParam String sex, @RequestParam Integer age, @RequestParam String email){
         User user = new User();
@@ -35,6 +36,7 @@ public class MainController {
         Optional<User> user = userRepository.findById(id);
         return user.get();
     }
+    // request body: raw JSON(application/json)
     // 按照这样Restful形式的PUT写接口，可以清晰地区分出PK和其它字段
     @PutMapping(path = "/updateUser/{id}")
     public @ResponseBody String updateUser(@PathVariable(value = "id") Integer id ,@Valid @RequestBody User userDetails){
