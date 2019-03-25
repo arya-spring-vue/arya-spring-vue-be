@@ -20,8 +20,8 @@ public class AryaSpringVueBeApplication {
             public void addCorsMappings(CorsRegistry registry) {
                 // 映射项目路由，允许/spring/vue下的所有接口跨域。注意**才是代表所有路由，否则*仅仅是类似/spring/vue/update一级路由，不支持/spring/vue/update?id=1。
                 registry.addMapping("/spring/vue/**")
-                        // 指定
-                        .allowedMethods("GET", "POST", "OPTIONS", "PUT", "DELETE")
+                        // 设置Access-Control-Allow-Method: "GET", "POST", "PUT", "DELETE"
+                        .allowedMethods("GET", "POST", "PUT", "DELETE")
                         // 设置Access-Control-Allow-Origin:http://localhost:3000，指定可访问源。注意PUT和DELETE引起的OPTIONS预检请求需要指定源，不可设置为*。
                         .allowedOrigins("http://localhost:3000")
                         // 设置Access-Control-Allow-Headers: content-type。
