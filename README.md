@@ -26,7 +26,12 @@ spring-boot, spring ,mysql
 - 通过mvn生成可执行的jar包并运行:`./mvnw clean package` `java -jar target/foo-bar-baz.jar`或者`./mvnw spring-boot:run`
 - 服务运行在localhost:8080
 
+#### 5.配置项目全局配置支持CORS
+- 通过CorsRegistry.allowedOrigins("http://localhost:3000"),指定 Access-Control-Allow-Origin:http://localhost:3000，限制指定源发送跨域请求，提升安全性
+- 通过CorsRegistry.allowedMethods("GET", "POST", "PUT", "DELETE"),指定 Access-Control-Allow-Methods: GET, POST, PUT", DELETE，支持OPTIONS跨域预检
+
 
 ### 参考资料
-https://spring.io/guides/gs/accessing-data-mysql/
-https://spring.io/guides/gs/rest-service-cors/
+- https://spring.io/guides/gs/accessing-data-mysql/
+- https://spring.io/guides/gs/rest-service-cors/
+- https://www.baeldung.com/spring-cors
