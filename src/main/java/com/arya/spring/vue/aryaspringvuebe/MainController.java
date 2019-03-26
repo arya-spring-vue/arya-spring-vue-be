@@ -50,4 +50,10 @@ public class MainController {
         return "更新用户成功！";
     }
 
+    // 删除一个好友
+    @DeleteMapping(path = "/deleteUser/{id}")
+    public @ResponseBody String deleteUser(@PathVariable(value = "id") Integer id){
+        userRepository.deleteById(id);
+        return "删除用户成功！";
+    }
 }
