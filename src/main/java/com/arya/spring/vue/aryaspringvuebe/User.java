@@ -1,13 +1,14 @@
 package com.arya.spring.vue.aryaspringvuebe;
 
 import lombok.Data;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.sql.Timestamp;
 
 @Entity
+@Table(name = "Users")
 @Data
 public class User {
     @Id
@@ -21,4 +22,12 @@ public class User {
     private Integer age;
 
     private String email;
+
+    @Column(name="CreateTime", insertable = false, updatable = false)
+    @CreationTimestamp
+    private Timestamp createTime;
+
+    @Column(name="UpdateTime", insertable = false)
+    @UpdateTimestamp
+    private Timestamp updateTime;
 }
