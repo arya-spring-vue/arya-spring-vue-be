@@ -5,23 +5,37 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.Map;
 import java.util.Optional;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Controller
 @RequestMapping(path = "/spring/vue")
 public class MainController {
+    Logger logger = LoggerFactory.getLogger(MainController.class);
+
     @Autowired
     private UserRepository userRepository;
 
     // request body: form-data
     @PostMapping(path = "/createUser")
-    public @ResponseBody String createUser(@RequestParam String name, @RequestParam String sex, @RequestParam Integer age, @RequestParam String email){
+    @ResponseBody
+    public String createUser(@RequestBody Map<String,String> data){
+
+        String name = data.get("name");
+        String sex = data.get("sex");
+        Integer age = Integer.parseInt(data.get("age"));
+        String email = data.get("email");
+        logger.info("/spring/vue/createUser接收到的POST请求参数: {}", data);
+
         User user = new User();
         user.setName(name);
         user.setSex(sex);
         user.setAge(age);
         user.setEmail(email);
         userRepository.save(user);
+
         return "创建用户成功！";
     }
 

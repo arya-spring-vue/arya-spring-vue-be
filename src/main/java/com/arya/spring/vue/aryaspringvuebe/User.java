@@ -12,7 +12,7 @@ import java.sql.Timestamp;
 @Data
 public class User {
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Integer id;
 
     private String name;
@@ -23,11 +23,11 @@ public class User {
 
     private String email;
 
-    @Column(name="CreateTime", insertable = false, updatable = false)
+    @Column(name="CreateTime", updatable = false)
     @CreationTimestamp
     private Timestamp createTime;
 
-    @Column(name="UpdateTime", insertable = false)
+    @Column(name="UpdateTime")
     @UpdateTimestamp
     private Timestamp updateTime;
 }
