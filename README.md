@@ -21,7 +21,7 @@ spring-boot, spring ,mysql
 #### 3.Spring编写Controller提供接口
 - 创建实体类，其实也就是通过Spring创建user表，指定pk，并创建name，email字段及其getter和setter，通过lombok的@Data注解优化实体类
 - 创建用于CRUD的repository Bean，继承spring CrudRepository类，用于实例的增删改查
-- 创建Spring的Controller，并且通过RequestMapping添加路由，RequestParam抽取请求中数据，在不同路由进行不同的业务处理
+- 创建Spring的Controller，并且通过RequestMapping添加路由，RequestParam,RequestBody抽取请求中数据，在不同路由进行不同的业务处理
 
 #### 4.打包运行本地启动服务供前端调用
 - 创建基于Spring的内嵌Tomcat容器运行时，这是通过spring boot的SpringApplication
@@ -31,6 +31,13 @@ spring-boot, spring ,mysql
 #### 5.配置项目全局配置支持CORS
 - 通过CorsRegistry.allowedOrigins("http://localhost:3000"),指定 Access-Control-Allow-Origin:http://localhost:3000，限制指定源发送跨域请求，提升安全性
 - 通过CorsRegistry.allowedMethods("GET", "POST", "PUT", "DELETE"),指定 Access-Control-Allow-Methods: GET, POST, PUT", DELETE，支持OPTIONS跨域预检
+
+
+#### 6.提供符合Restful规范的CRUD接口
+- 增 POST `/spring/vue/createUser` reqBody
+- 删 DELETE `/spring/vue/deleteUser/{id}` pathVar
+- 改 PUT `/spring/vue/updateUser/{id}` pathVar,reqBody
+- 查 GET `/spring/vue/readUsers`
 
 
 ### 参考资料
