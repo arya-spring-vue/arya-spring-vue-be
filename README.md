@@ -39,6 +39,10 @@ spring-boot, spring ,mysql
 - 改 PUT `/spring/vue/updateUser/{id}` pathVar,reqBody
 - 查 GET `/spring/vue/readUsers`
 
+#### 7.注册登录
+- 注册 仅支持输入手机号进行注册，需要输入密码
+- 登录 支持手机号密码登录、手机号验证码登录、微信二维码登录
+
 
 ### 参考资料
 - https://spring.io/guides/gs/accessing-data-mysql/
