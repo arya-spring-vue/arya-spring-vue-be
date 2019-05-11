@@ -1,5 +1,7 @@
-package com.arya.spring.vue.aryaspringvuebe;
+package com.arya.spring.vue.aryaspringvuebe.controller;
 
+import com.arya.spring.vue.aryaspringvuebe.User;
+import com.arya.spring.vue.aryaspringvuebe.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -71,3 +73,4 @@ public class MainController {
         return "删除用户成功！";
     }
 }
+
