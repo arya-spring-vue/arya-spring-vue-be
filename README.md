@@ -1,7 +1,7 @@
 ![](https://github.com/arya-spring-vue/arya-spring-vue-be/blob/master/screenshot/arya-spring-vue-be.png)
 
 # arya-spring-vue-be
-这是一个后台管理系统的服务端。
+这是一个后台管理系统的服务端
 
 ### 后端技术架构
 spring-boot, spring ,mysql
