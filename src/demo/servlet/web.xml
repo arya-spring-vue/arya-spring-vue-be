@@ -1,0 +1,18 @@
+<web-app>
+    <servlet>
+        <servlet-name>
+            FormServlet
+        </servlet-name>
+        <servlet-class>
+            com.root.FromServlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>
+            FormServlet
+        </servlet-name>
+        <url-pattern>
+            /calculateServlet
+        </url-pattern>
+    </servlet-mapping>
+</web-app>
