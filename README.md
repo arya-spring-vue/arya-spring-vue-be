@@ -16,6 +16,11 @@ spring-boot, spring ,mysql
 
 #### 2.Spring与MySql的ORM映射
 - 创建数据库，设置用户账号密码并赋权
+```
+mysql> create database arya_spring_vue_be;
+mysql> create user 'arya_spring_vue_user'@'%' identified by 'password';
+mysql> grant all on arya_spring_vue_be.* to 'arya_spring_vue_user'@'%';
+```
 - 创建application.properties，配置Spring JPA和Spring DataSource，建立Spring与Mysql之间的连接
 
 #### 3.Spring编写Controller提供接口
