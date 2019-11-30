@@ -29,7 +29,7 @@ public class AryaSpringVueBeApplication {
                         // 设置Access-Control-Allow-Method: "GET", "POST", "PUT", "DELETE"
                         .allowedMethods("GET", "POST", "PUT", "DELETE")
                         // 设置Access-Control-Allow-Origin:http://localhost:3000，指定可访问源。注意PUT和DELETE引起的OPTIONS预检请求需要指定源，不可设置为*。
-                        .allowedOrigins("http://localhost:3000")
+                        .allowedOrigins("http://arya.frankkai.cn")
                         // 设置Access-Control-Allow-Headers: content-type。
                         .allowedHeaders("Content-Type")
                         // 设置Access-Control-Max-Age: 3600。注意这里是Long类型的
